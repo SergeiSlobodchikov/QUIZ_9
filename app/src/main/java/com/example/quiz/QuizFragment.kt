@@ -81,7 +81,7 @@ class QuizFragment : Fragment() {
                     quizStorage.questions[i].answers[j] == binding.root.findViewById<RadioButton>(binding.question1.checkedRadioButtonId).text ||
                     quizStorage.questions[i].answers[j] == binding.root.findViewById<RadioButton>(binding.question2.checkedRadioButtonId).text ||
                     quizStorage.questions[i].answers[j] == binding.root.findViewById<RadioButton>(binding.question3.checkedRadioButtonId).text
-                ) answers += i
+                ) answers += j
             }
         }
 

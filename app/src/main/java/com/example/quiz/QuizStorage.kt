@@ -1,15 +1,19 @@
 package com.example.quiz
 
 object QuizStorage {
+
     fun getQuiz(locale: Locale): Quiz = when (locale) {
         Locale.Ru -> quizRu
         Locale.En -> quizEn
     }
+    // Этот метод возвращает объект `Quiz` в зависимости от переданного параметра `locale`.
 
     fun answer(quiz: Quiz, answers: List<Int>): String = quiz
         .questions
         .zip(answers) { question, index -> question.feedback[index] }
         .joinToString(separator = " ")
+
+    // Этот метод возвращает строку, которая формируется из ответов на вопросы, указанные в списке `answers`.
 
     enum class Locale {
         Ru, En
